@@ -45,24 +45,20 @@ metadata:
       ]
     capabilities: Basic Install
     containerImage: REPLACE_IMAGE
-    description: Operator to optimize OpenShift clusters for applications sensitive to CPU and network latency.
     olm.skipRange: '>=4.5.0 <4.6.0'
     operators.operatorframework.io/builder: operator-sdk-v1.0.0
     operators.operatorframework.io/project_layout: go.kubebuilder.io/v2
-    repository: https://github.com/operator-kni/performance-addon-operators
   name: performance-addon-operator.v4.6.0
   namespace: placeholder
 spec:
   apiservicedefinitions: {}
   customresourcedefinitions:
     owned:
-    - description: PerformanceProfile is the Schema for the performanceprofiles API.
-      displayName: Performance Profile
+    - displayName: Performance Profile
       kind: PerformanceProfile
       name: performanceprofiles.performance.openshift.io
       version: v1
-    - description: PerformanceProfile is the Schema for the performanceprofiles API.
-      displayName: Performance Profile
+    - displayName: Performance Profile
       kind: PerformanceProfile
       name: performanceprofiles.performance.openshift.io
       version: v1alpha1
@@ -70,6 +66,9 @@ spec:
 
     Performance Addon Operator provides the ability to enable advanced node performance tunings on a set of nodes.
   displayName: Performance Addon Operator
+  icon:
+  - base64data: ""
+    mediatype: ""
   install:
     spec:
       clusterPermissions:
@@ -204,6 +203,9 @@ spec:
   links:
   - name: Source Code
     url: https://github.com/openshift-kni/performance-addon-operators
+  maintainers:
+  - email: your@email.com
+    name: Maintainer Name
   maturity: alpha
   provider:
     name: Red Hat
